@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EA6D850-2141-4073-9A6D-3D40D6C3BDF3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Horas01</RootNamespace>
+    <AssemblyName>Horas01</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InsereHorasArgs.cs" />
+    <Compile Include="Lib.cs" />
+    <Compile Include="LimiteHoraArgs.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generic.cs" />
+    <Compile Include="HorasArgs.cs" />
+    <Compile Include="html_components\Tabela.cs" />
+    <Compile Include="Log_Erro.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="telas\CalendarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\CalendarioForm.Designer.cs">
+      <DependentUpon>CalendarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\config\opcoes\Tela17.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\config\opcoes\Tela17.Designer.cs">
+      <DependentUpon>Tela17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\config\Tela16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\config\Tela16.Designer.cs">
+      <DependentUpon>Tela16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\EscolherNome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\EscolherNome.Designer.cs">
+      <DependentUpon>EscolherNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\ferramentas\Tela17.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\ferramentas\Tela17.Designer.cs">
+      <DependentUpon>Tela17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\gerar\Tela12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\gerar\Tela12.Designer.cs">
+      <DependentUpon>Tela12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\gerar\Tela13.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\gerar\Tela13.Designer.cs">
+      <DependentUpon>Tela13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\config\Tela10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\config\Tela10.Designer.cs">
+      <DependentUpon>Tela10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\config\Tela11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\config\Tela11.Designer.cs">
+      <DependentUpon>Tela11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\InserirPlantao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\InserirPlantao.Designer.cs">
+      <DependentUpon>InserirPlantao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\MesFechamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\MesFechamento.Designer.cs">
+      <DependentUpon>MesFechamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\resumo\Tela01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\resumo\Tela01.Designer.cs">
+      <DependentUpon>Tela01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\resumo\Tela02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\resumo\Tela02.Designer.cs">
+      <DependentUpon>Tela02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\resumo\Tela03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\resumo\Tela03.Designer.cs">
+      <DependentUpon>Tela03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\resumo\Tela04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\resumo\Tela04.Designer.cs">
+      <DependentUpon>Tela04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\resumo\Tela05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\resumo\Tela05.Designer.cs">
+      <DependentUpon>Tela05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\resumo\Tela06.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\resumo\Tela06.Designer.cs">
+      <DependentUpon>Tela06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\resumo\Tela07.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\resumo\Tela07.Designer.cs">
+      <DependentUpon>Tela07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\resumo\Tela08.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\resumo\Tela08.Designer.cs">
+      <DependentUpon>Tela08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\resumo\Tela09.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\resumo\Tela09.Designer.cs">
+      <DependentUpon>Tela09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\simular\Tela14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\simular\Tela14.Designer.cs">
+      <DependentUpon>Tela14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\simular\Tela15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="telas\simular\Tela15.Designer.cs">
+      <DependentUpon>Tela15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="telas\CalendarioForm.resx">
+      <DependentUpon>CalendarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\config\opcoes\Tela17.resx">
+      <DependentUpon>Tela17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\config\Tela16.resx">
+      <DependentUpon>Tela16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\EscolherNome.resx">
+      <DependentUpon>EscolherNome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\config\Tela10.resx">
+      <DependentUpon>Tela10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\config\Tela11.resx">
+      <DependentUpon>Tela11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\ferramentas\Tela17.resx">
+      <DependentUpon>Tela17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\gerar\Tela12.resx">
+      <DependentUpon>Tela12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\InserirPlantao.resx">
+      <DependentUpon>InserirPlantao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\MesFechamento.resx">
+      <DependentUpon>MesFechamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\resumo\Tela01.resx">
+      <DependentUpon>Tela01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\resumo\Tela06.resx">
+      <DependentUpon>Tela06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\resumo\Tela07.resx">
+      <DependentUpon>Tela07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\resumo\Tela08.resx">
+      <DependentUpon>Tela08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\resumo\Tela09.resx">
+      <DependentUpon>Tela09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\simular\Tela14.resx">
+      <DependentUpon>Tela14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\simular\Tela15.resx">
+      <DependentUpon>Tela15.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="telas\arquivo\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

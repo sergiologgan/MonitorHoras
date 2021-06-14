@@ -42,7 +42,7 @@ namespace Horas01.telas.resumo
                             Nome = x.Key.Nome,
                             Dia = x.Key.Day,
                             Total = x.SumGetTimeSpan(s => s.Total)
-                        }).OrderBy(x => x.Nome).ToList();
+                        }).OrderBy(x => x.Dia).ToList();
                     if (query.Count <= 0) return;
 
                     Dictionary<string, List<dynamic>> d = new Dictionary<string, List<dynamic>>();
